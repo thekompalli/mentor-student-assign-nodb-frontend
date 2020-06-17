@@ -1,0 +1,46 @@
+<div class="insider">
+
+    <div class="selector mt-5">
+        <div>
+            <mat-form-field class="select-form">
+                <mat-label>Select Mentor</mat-label>
+                <mat-select>
+                <mat-option *ngFor = "let i of ms.mentors_list" [value]="i.id" (click) = "getStudentVal(i.id, i.name)">
+                {{i['name']}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" (click) = "submit()">Submit</button>
+    </div>
+
+  
+
+    <div class="container mt-5" *ngIf = "!isHidden">
+        <div class="row">
+            <div class="col-md-3" *ngFor = "let j of ms.students_list">
+                <div class="card text-center" >
+                    <div class="card-body">
+                      
+                        <div class="title">
+                            <h1>{{j["name"]}}</h1>
+                        </div>
+                        <div class="age">
+                            <h4><span style="font-size: 12px;">Age: &nbsp;</span>{{j["age"]}}</h4>
+                        </div>
+                        <div class="subject">
+                            <h4><span style="font-size: 12px;">Subject: &nbsp;</span>{{j["subject"]}}</h4>
+                        </div>
+    
+                    </div>
+                    <div class="more p-3">
+                        <div class="card-header"><input type="checkbox" [value]="j.id" (change)="detectChange($event)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</div>

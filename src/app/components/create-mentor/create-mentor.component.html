@@ -1,0 +1,35 @@
+ <div class="container">
+    <div class="col-md-12">
+        <div class="card border-0" id="insider">
+            <form class="example-form" [formGroup] = "mentorForm" (ngSubmit) = "onSubmit()">
+                <div>
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="name">Full Name</mat-label>
+                        <input matInput type="text" id="name" formControlName = "name" placeholder="Enter your Full Name">
+                    </mat-form-field>
+                </div>
+                  <div>
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="age">Age</mat-label>
+                        <input matInput type="text" id="age" formControlName = "age" placeholder="Enter your age">
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="subject">Subject</mat-label>
+                        <input matInput type="text" id="subject" formControlName = "subject" placeholder="Enter your subject">
+                    </mat-form-field>
+                  </div>
+                
+                <button mat-raised-button color="accent" type="submit">Submit</button>
+              </form>
+        </div>
+    
+    </div>
+    <div class="heading">
+        <h1>Add Mentor</h1>
+    </div>
+    
+</div>
+
+  

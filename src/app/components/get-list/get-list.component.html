@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="col-lg-12">
+        <table class="table table-hover">
+            <thead>
+                <th>
+                    Student ID
+                </th>
+                <th>
+                    Student Name
+                </th>
+                <th>
+                    Mentor Name
+                </th>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let el of ms.unfiltered_students_list">
+                    <td *ngFor = "let i of heads">
+                        {{el[i]}}
+                    </td>
+                    <td>
+                        {{el['mentor']['name']}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+   
+</div>
